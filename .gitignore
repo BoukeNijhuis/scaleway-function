@@ -1,16 +1,6 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# Package Files #
-*.jar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# target folder
-*/target
-
 .idea
+node_modules
+java-container/target
+
+# contains secrets
+java-container/src/main/resources/solar-panel-checker.properties
