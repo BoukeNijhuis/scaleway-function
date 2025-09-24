@@ -1,0 +1,38 @@
+service: scaleway-container
+useDotenv: true
+configValidationMode: off
+provider:
+  name: scaleway
+  # Global Environment variables - used in every functions
+  env:
+    test: test
+
+  # Optional override of Scaleway credentials
+  scwToken: ${env:SCALEWAY_SECRET_KEY}
+  scwProject: ${env:SCALEWAY_PROJECT}
+
+plugins:
+  - serverless-scaleway-functions
+
+package:
+  patterns:
+    - '!node_modules/**'
+    - '!.gitignore'
+    - '!.git/**'
+
+custom:
+  containers:
+    solar-panel-checker:
+#      directory: java-container
+      registryImage: rg.fr-par.scw.cloud/bouke/solar-panel-checker:latest
+      # description: ""
+      # minScale: 1
+      # memoryLimit: 256
+      # maxScale: 2
+      # maxConcurrency: 50
+      # timeout: 20000
+      # port: 8080
+      # httpOption: redirected
+      # Local environment variables - used only in given function
+      env:
+        local: local
