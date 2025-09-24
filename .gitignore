@@ -14,3 +14,7 @@ hs_err_pid*
 */target
 
 .idea
+node_modules
+
+# contains secrets
+java-container/src/main/resources/solar-panel-checker.properties
