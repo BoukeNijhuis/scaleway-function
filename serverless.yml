@@ -23,9 +23,14 @@ package:
 custom:
   containers:
     solar-panel-checker:
-      #      directory: java-container
+#      directory: java-container
       registryImage: rg.fr-par.scw.cloud/bouke/solar-panel-checker:latest
+      cpuLimit: 100
+      memoryLimit: 128
       healthCheck:
         httpPath: /health
         interval: 10s
         failureThreshold: 3
+      events:
+        - schedule:
+            rate: "0 20 * * *"
