@@ -33,4 +33,4 @@ custom:
         failureThreshold: 3
       events:
         - schedule:
-            rate: "0 20 * * *"
+            rate: "0 20 * * 7"
