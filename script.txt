@@ -1,4 +1,5 @@
 cd java-container
+mvn package
 docker login rg.fr-par.scw.cloud/bouke
 docker build -t rg.fr-par.scw.cloud/bouke/solar-panel-checker  --platform linux/amd64 .
 docker image push rg.fr-par.scw.cloud/bouke/solar-panel-checker:latest
