@@ -1,5 +1,5 @@
 {
-  "name": "function-handler-java",
+  "name": "scaleway-function",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
